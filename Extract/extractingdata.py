@@ -1,9 +1,9 @@
 # Reading CSv with Pandas #
 import pandas as pd
 
-from Load.insertDataDelivery import insertDataDelivery
+from dataEngineering.Load.insertDataDelivery import insertDataDelivery
 
-deliveries = pd.read_csv('../datalab-work-at-deliverycenter/datasets/deliveries.csv')
+deliveries = pd.read_csv('../datalab-d/datasets/deliveries.csv')
 
 for row in deliveries.iterrows():
     driver_id = row[1]['driver_id']
@@ -29,11 +29,6 @@ for row in deliveries.iterrows():
 
     insertDataDelivery(driver_id, delivery_order_id, delivery_id,delivery_distance_meters,delivery_status)
 
-#channels = pd.read_csv('../datalab-work-at-deliverycenter/datasets/channels.csv')
-#drivers = pd.read_csv('../datalab-work-at-deliverycenter/datasets/drivers.csv')
-#hubs = pd.read_csv('../datalab-work-at-deliverycenter/datasets/hubs.csv')
-#payments = pd.read_csv('../datalab-work-at-deliverycenter/datasets/payments.csv')
-#stores = pd.read_csv('../datalab-work-at-deliverycenter/datasets/stores.csv')
 
 
 
